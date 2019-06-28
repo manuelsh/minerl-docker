@@ -60,7 +60,7 @@ RUN conda install -y -c pytorch \
  && conda clean -ya
 
 # Install jupyter notebook
-RUN pip install jupyter
+RUN pip install jupyter pandas matplotlib numpy scipy sklearn
 
 # Create starting file
 RUN echo "xhost + & jupyter notebook --allow-root --ip 0.0.0.0" > /app/xvfb.sh
